@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Department Survey</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .required:after {
+      content: '*';
+      color: red;
+    }
+  </style>
+</head>
+<body style="background-color:#006633 ;">
+  <div class="container" style="margin-top: 10px";>
+    <h1 style="text-align: center; color: #FFCC33;">Computer Science Department Survey</h1>
+    <div class="card" style="margin-top: 40px;">
+        <div class="card-body">
+    <form id="surveyForm" autocomplete="on">
+      <div class="form-group">
+        <label for="username">Username <span class="required"></span></label>
+        <input type="text" class="form-control" id="username" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Street Address <span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="123 Main St" required>
+      </div>
+      <div class="form-group">
+        <label for="address">City <span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: Chicago" required>
+      </div>
+      <div class="form-group">
+        <label for="address">State<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: Texas" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Zip Code<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: 500030" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Contact Number<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: +1 (242) 123-456" required>
+      </div>
+      <div class="form-group">
+        <label for="address">E-Mail<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: abc@cde.com" required>
+      </div>
+      <div class="form-group">
+        <label for="address">URL<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: www.example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Date of survey<span class="required"></span></label>
+        <input type="date" class="form-control" id="address" placeholder="MM-DD-YYYY" required>
+      </div>
+      <div class="form-group">
+        <label for="likes">What did you like most about the campus? <span class="required"></span></label><br>
+        <!-- <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+          </div> -->
+        <div class="card form-check form-check-inline" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="students" value="students">
+          <label class="form-check-label" for="likes_students">students</label>
+          </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="likes_students" value="location">
+          <label class="form-check-label" for="likes_students">location</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="campus" value="campus">
+          <label class="form-check-label" for="likes_students">campus</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="atmosphere" value="atmosphere">
+          <label class="form-check-label" for="likes_students">atmosphere</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="dorms" value="dorms">
+          <label class="form-check-label" for="likes_students">dorm rooms</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="checkbox" id="sports" value="sports">
+          <label class="form-check-label" for="likes_students">sports</label>
+          </li>
+        </ul>
+        </div>
+  
+      </div>
+      <div class="form-group">
+        <label>How did you become interested in the university? <span class="required"></span></label><br>
+        <div class="card form-check form-check-inline" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">           
+          <input class="form-check-input" type="radio" name="interest" id="friends" value="friends" required>
+          <label class="form-check-label" for="friends">Friends</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="radio" name="interest" id="friends" value="friends" required>
+          <label class="form-check-label" for="friends">Internet</label>
+        </li>
+          <li class="list-group-item">
+          <input class="form-check-input" type="radio" name="interest" id="friends" value="friends" required>
+          <label class="form-check-label" for="friends">Telivision</label>
+          <li class="list-group-item">
+          <input class="form-check-input" type="radio" name="interest" id="friends" value="friends" required>
+          <label class="form-check-label" for="friends">other</label>
+         </li>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">High School Graduation Month<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="month">
+      </div>
+      <div class="form-group">
+        <label for="address">High School Graduation Year<span class="required"></span></label>
+        <input type="text" class="form-control" id="address" placeholder="ex: 2021" >
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="likelihood">Likelihood of Recommending This School <span class="required"></span></label>
+        <select class="form-control" id="likelihood" required>
+          <option value="" disabled selected>Select Likelihood</option>
+          <option value="very_likely">Very Likely</option>
+          <option value="likely">Likely</option>
+          <option value="unlikely">Unlikely</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-lg" style="background-color: #006633;">Submit</button>
+    </form>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="department.html" class="btn btn-primary me-md-2" style="background-color: #006633;" type="button">Department page</a>
+    </div>
+  </div>
+</div>
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById('username').focus(); //focuses on the first text field
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
